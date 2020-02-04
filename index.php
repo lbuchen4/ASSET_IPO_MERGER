@@ -6,6 +6,6 @@
   </head>
   <body>
     <h1><?php echo "Howdy." ?></h1>
-    <h2>Welcome to Weenie Hut Junior.</h2>
+    <h2>Welcome to Weenie Hut Junior. Have a hot dog.</h2>
   </body>
 </html>
