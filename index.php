@@ -14,8 +14,8 @@
       $charset = 'utf8' ;
 
       $dsn = "mysql:host={$dbhost};port={$dbport};dbname={$dbname};charset={$charset}";
-      $username = $_SERVER['RDS_USERNAME'];
-      $password = $_SERVER['RDS_PASSWORD'];
+      $username = $_SERVER['admin'];
+      $password = $_SERVER['&iaTRSb#'];
 
       $pdo = new PDO($dsn, $username, $password);
     ?>
