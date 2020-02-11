@@ -6,6 +6,19 @@
     <title>Weenie Hut Haqs</title>
   </head>
   <body>
+    <!-- connect to AWS RDS db -->
+    <?php
+      $dbhost = $_SERVER['practice.crac6blasqqn.us-east-1.rds.amazonaws.com'];
+      $dbport = $_SERVER['3306'];
+      $dbname = $_SERVER['practice-db'];
+      $charset = 'utf8' ;
+
+      $dsn = "mysql:host={$dbhost};port={$dbport};dbname={$dbname};charset={$charset}";
+      $username = $_SERVER['RDS_USERNAME'];
+      $password = $_SERVER['RDS_PASSWORD'];
+
+      $pdo = new PDO($dsn, $username, $password);
+    ?>
     <img src="images/weenie_hut_juniors.webp" alt="best restaurant ever">
     <section id="welcome">
       <h1><?php echo "Howdy." ?></h1>
