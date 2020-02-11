@@ -53,7 +53,7 @@
         <li><a href="https://atom.io/" target="_blank">A Text Editor</a> - to type our code in.</li>
         <li><a href="https://www.apachefriends.org/index.html" target="_blank">Xampp</a> - to communicate with the Chinese children.</li>
         <li><a href="https://classroom.udacity.com/courses/ud206" target="_blank">Access to your command line</a> - to feel like a legit hacker and use git.</li>
-        <li><a href="https://github.com/" target"_blank">A Github account</a> - no relation to "the Hub" hub.</li>
+        <li><a href="https://github.com/" target="_blank">A Github account</a> - no relation to "the Hub" hub.</li>
       </ul>
       <p>There are a few other components to this setup that will make you want to quit before you start:</p>
       <ul>
