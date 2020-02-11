@@ -95,7 +95,7 @@
         So my friends. Now you are probably thinking that this is too good to be true.<br>
         Not so! Only, these <strong>powerful</strong> resources are not completely free. <br>
         The capitalist pigs at Amazon intend to charge us for our databases and instances. <br>
-        The nerds at codecademy also try to trick you into paying for a pro membership by means of their free trial/ <br>
+        The nerds at codecademy also try to trick you into paying for a pro membership by means of their free trial. <br>
         My friends, regard me. It is of the utmost importance that you do not forget to cancel this trial. <br>
         Given that you cancel this trial in time, our costs should come to no more than about 5 dollars per month. <br>
         Now I understand that for some of us, this price may be a bit steep. But if we can get our fellow spirits to commit, we can all afford to <strong>boom</strong>.
