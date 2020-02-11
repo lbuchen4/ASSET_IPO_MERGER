@@ -82,8 +82,8 @@
       So. Where to start? Regard me please. It is very imprtant that you learn the Git, CSS and HTML first. <br>
       You can be learning the HTML in 15 minutes. CSS will take 17. Git is a little trickier. <br>
       In theory you should be doing the Git first. But if you want to flex your sexy muscles, do the HTML and CSS first. <br>
-      Try clicking on some of the links up abpve to see where I reccomend you start being the learning. <br>
-      When you get the hamg of those three, come back and try to make this page better (impossible). <br><br>
+      Try clicking on some of the links up above to see where I reccomend you start being the learning. <br>
+      When you get the hang of those three, come back and try to make this page better (impossible). <br><br>
       If you like this page and you are interested in participating, please click here.
     </section>
   </body>
