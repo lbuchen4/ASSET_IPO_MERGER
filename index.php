@@ -30,17 +30,19 @@
         We will be focusing primarily on:
       </p>
       <ul>
-        <li class="client">HTML</li>
-        <li class="client">CSS</li>
-        <li class="client">Javascript</li>
-        <li class="server">PHP</li>
-        <li class="server">MYSQL</li>
+        <li class="client"><a href="https://www.codecademy.com/catalog/language/html-css" target="_blank">HTML</a></li>
+        <li class="client"><a href="https://www.codecademy.com/catalog/language/html-css" target="_blank">CSS</a></li>
+        <li><a href="https://www.udacity.com/course/version-control-with-git--ud123" targhet="_blank">Git</a></li>
+        <li class="client"><a href="https://www.codecademy.com/catalog/language/javascript" target="_blank">Javascript</a></li>
+        <li class="server"><a href="https://www.codecademy.com/catalog/language/php" target="_blank">PHP</a></li>
+        <li class="server"><a href="https://www.codecademy.com/catalog/language/sql" target="_blank">SQL</a></li>
       </ul>
       <p>
         The <span class="client">maroon</span> ones are known as <em>client-side</em> languages. <br>
         They are interpretted by the web browser like chrome or firefux. <br>
         The <span class="server">blue</span> ones are called <em>server-side</em> languages. <br>
         Their functionality depends on little Chinese children in my basement. <br>
+        Git is a Version Control System built into your computer if you have a mac. <br>
       </p>
     </section>
     <section class="tools">
@@ -48,10 +50,10 @@
       <p>Before we get dive in, we will need some tools to assist us on our journey.</p>
       <ul>
         <li>A computer machine.</li>
-        <li>A Text Editor - to type our code in.</li>
-        <li>Xampp - to communicate with the Chinese children.</li>
-        <li>Access to your command line - to feel like a legit hacker and use git.</li>
-        <li>A Github account - no relation to "the Hub" hub.</li>
+        <li><a href="https://atom.io/" target="_blank">A Text Editor</a> - to type our code in.</li>
+        <li><a href="https://www.apachefriends.org/index.html" target="_blank">Xampp</a> - to communicate with the Chinese children.</li>
+        <li><a href="https://classroom.udacity.com/courses/ud206" target="_blank">Access to your command line</a> - to feel like a legit hacker and use git.</li>
+        <li><a href="https://github.com/" target"_blank">A Github account</a> - no relation to "the Hub" hub.</li>
       </ul>
       <p>There are a few other components to this setup that will make you want to quit before you start:</p>
       <ul>
@@ -85,7 +87,7 @@
       In theory you should be doing the Git first. But if you want to flex your sexy muscles, do the HTML and CSS first. <br>
       Try clicking on some of the links up above to see where I reccomend you start being the learning. <br>
       When you get the hang of those three, come back and try to make this page better (impossible). <br><br>
-      If you like this page and you are interested in participating, please click here.
+      If you like this page and you are interested in participating, please click <a href="images/oops.jpg">here</a>.
     </section>
   </body>
 </html>
