@@ -60,5 +60,31 @@
       <p>Best option might be to bring me your computer machine and I walk through it with you:</p>
       <img src="images/boom.jpg" alt="boom">
     </section>
+    <section class="scope">
+      <p>
+        Now, probably you are thinking: why tf would I want to waste sexy yoga time to type on my computer machine?
+        This I also asked at first. But, regard me please. The coding is very <strong>powerful</strong>. <br>
+        We can be making:
+      </p>
+      <ul>
+        <li>Dynamic Websites</li>
+        <li>Webapps</li>
+        <li>Databases Driven Thingys</li>
+      </ul>
+      <p>When we conquer this terrain we may tackle:</p>
+      <ul>
+        <li>Swift Apps for iOS</li>
+        <li>JAVA Apps for Android losers</li>
+        <li>Artificially intelligent Python Programs</li>
+      </ul>
+    </section>
+    <section class="start">
+      So. Where to start? Regard me please. It is very imprtant that you learn the Git, CSS and HTML first. <br>
+      You can be learning the HTML in 15 minutes. CSS will take 17. Git is a little trickier. <br>
+      In theory you should be doing the Git first. But if you want to flex your sexy muscles, do the HTML and CSS first. <br>
+      Try clicking on some of the links up abpve to see where I reccomend you start being the learning. <br>
+      When you get the hamg of those three, come back and try to make this page better (impossible). <br><br>
+      If you like this page and you are interested in participating, please click here.
+    </section>
   </body>
 </html>
