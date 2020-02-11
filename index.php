@@ -2,7 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/practice.css">
+    <title>Weenie Hut Haqs</title>
   </head>
   <body>
     <img src="images/weenie_hut_juniors.webp" alt="best restaurant ever">
