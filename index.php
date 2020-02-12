@@ -137,10 +137,22 @@
       </p>
     </section>
     <section>
-      <form class="join" action="index.html" method="post">
+      <form id="join" action="index.php" method="post">
         <input type="text" name="name" value="name">
-        <input type="submit" oncllick="alert('encouragement my friend! Yes!')">
+        <input type="submit" name="join" value="Boom" onclick="alert('Encouragement! Yes!')">
       </form>
+
+      <!-- add PHP to add member to appropriate table -->
+      <?php
+        //first create the table if it doesn't already apc_exist
+        $sql = "CREATE TABLE [IF NOT EXISTS] participants (
+          name VARCHAR(20),
+        )";
+        $statement = $pdo->prepare($sql);
+        $statement->execute();
+        $statement->closeCursor(); 
+      ?>
+
     </section>
   </body>
 </html>
