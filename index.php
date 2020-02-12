@@ -34,11 +34,18 @@
 
       try{
         $pdo = new PDO($dsn, $username, $password);
-        echo "<p>You are connected to the database.</p>";
+        echo "<p>You are connected to the $which_db database.</p>";
       } catch (PDOException $e){
         $error_message = $e->getMessage();
         echo "<p>An error occurred while connecting to the $which_db database: $error_message </p>";
       }
+      //first create the table if it doesn't already exist
+      $sql = "CREATE TABLE participants (
+        name VARCHAR(20)
+      )";
+      $statement = $pdo->prepare($sql);
+      $statement->execute();
+      $statement->closeCursor();
     ?>
 
     <img src="images/weenie_hut_juniors.webp" alt="best restaurant ever">
@@ -137,20 +144,18 @@
       </p>
     </section>
     <section>
-      <form id="join" action="index.php" method="post">
+      <form class="join" action="index.php" method="post">
         <input type="text" name="name" value="name">
         <input type="submit" name="join" value="Boom" onclick="alert('Encouragement! Yes!')">
       </form>
 
       <!-- add PHP to add member to appropriate table -->
       <?php
-        //first create the table if it doesn't already apc_exist
-        $sql = "CREATE TABLE [IF NOT EXISTS] participants (
-          name VARCHAR(20),
-        )";
-        $statement = $pdo->prepare($sql);
-        $statement->execute();
-        $statement->closeCursor(); 
+        if(isset$_POST['name']){
+          $name = $_POST['name'];
+          $sql = "INSERT INTO participants
+                  VALUES ($name);"
+        }
       ?>
 
     </section>
