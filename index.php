@@ -10,22 +10,18 @@
     <?php
       ### try connecting to AWS DB ###
 
-      $dbhost = $_SERVER['RDS_HOSTNAME'];
-      $dbport = $_SERVER['RDS_PORT'];
-      $dbname = $_SERVER['RDS_DB_NAME'];
-      $charset = 'utf8' ;
+      if(isset($_SERVER['RDS_HOSTNAME'])){
+        $which_db= "AWS";
+        $dbhost = $_SERVER['RDS_HOSTNAME'];
+        $dbport = $_SERVER['RDS_PORT'];
+        $dbname = $_SERVER['RDS_DB_NAME'];
+        $charset = 'utf8' ;
 
-      $dsn = "mysql:host={$dbhost};port={$dbport};dbname={$dbname};charset={$charset}";
-      $username = $_SERVER['RDS_USERNAME'];
-      $password = $_SERVER['RDS_PASSWORD'];
-
-      try{
-        $pdo = new PDO($dsn, $username, $password);
-        echo "<p>You are connected to the database.</p>";
-      } catch (PDOException $e){
-        $error_message = $e->getMessage();
-        echo "<p>An error occurred while connecting to the  RDS database: $error_message </p>";
-        echo "<p>Attempting connection to localhost.</p>";
+        $dsn = "mysql:host={$dbhost};port={$dbport};dbname={$dbname};charset={$charset}";
+        $username = $_SERVER['RDS_USERNAME'];
+        $password = $_SERVER['RDS_PASSWORD'];
+      } else {
+        $which_db = "local";
         $dbhost = 'localhost';
         $dbport = '8080';
         $dbname = 'practice_db';
@@ -34,15 +30,17 @@
         $dsn = "mysql:host={$dbhost};port={$dbport};dbname={$dbname};charset={$charset}";
         $username = 'root';
         $password = '&iaTRSb#';
-        try{
-          $pdo = new PDO($dsn, $username, $password);
-          echo "<p>You are connected to the database.</p>";
-        } catch (PDOException $e){
-          $error_message = $e->getMessage();
-          echo "<p>An error occurred while connecting to the local database: $error_message </p>";
-        }
+      }
+
+      try{
+        $pdo = new PDO($dsn, $username, $password);
+        echo "<p>You are connected to the database.</p>";
+      } catch (PDOException $e){
+        $error_message = $e->getMessage();
+        echo "<p>An error occurred while connecting to the $which_db database: $error_message </p>";
       }
     ?>
+    
     <img src="images/weenie_hut_juniors.webp" alt="best restaurant ever">
     <section id="welcome">
       <h1><?php echo "Howdy." ?></h1>
