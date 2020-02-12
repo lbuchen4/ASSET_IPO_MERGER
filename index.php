@@ -151,10 +151,17 @@
 
       <!-- add PHP to add member to appropriate table -->
       <?php
-        if(isset($_POST['name']){
+        if(isset($_POST['name'])){
           $name = $_POST['name'];
           $sql = "INSERT INTO participants
-                  VALUES ($name);"
+                  VALUES ($name);";
+          $statement = $pdo->prepare($sql);
+          $statement->execute();
+          $members = $statement->fetchAll();
+          $statement->closeCursor();
+          foreach ($members as $member){
+            echo $member['name'];
+          }
         }
       ?>
 
