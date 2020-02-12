@@ -8,6 +8,10 @@
   <body>
     <!-- connect to AWS RDS db -->
     <?php
+      if (!defined('PDO::ATTR_DRIVER_NAME')) {
+        echo 'PDO unavailable';
+      }
+
       $dbhost = $_SERVER['practice.crac6blasqqn.us-east-1.rds.amazonaws.com'];
       $dbport = $_SERVER['3306'];
       $dbname = $_SERVER['practice_db'];
