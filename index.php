@@ -24,7 +24,7 @@
       } catch (PDOException $e){
         $error_message = $e->getMessage();
         echo "<p>An error occurred while connecting to the  RDS database: $error_message </p>";
-        echo "<p>Attempting connection to localhost.</p>"
+        echo "<p>Attempting connection to localhost.</p>";
         $dbhost = 'localhost';
         $dbport = '8080';
         $dbname = 'practice_db';
