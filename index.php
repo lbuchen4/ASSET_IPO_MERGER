@@ -33,8 +33,8 @@
       $charset = 'utf8' ;
 
       $dsn = "mysql:host={$dbhost};port={$dbport};dbname={$dbname};charset={$charset}";
-      $username = $_SERVER['root'];
-      $password = $_SERVER['&iaTRSb#'];
+      $username = 'root';
+      $password = '&iaTRSb#';
       try{
         $pdo = new PDO($dsn, $username, $password);
         echo "<p>You are connected to the database.</p>";
