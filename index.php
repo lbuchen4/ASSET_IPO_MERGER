@@ -40,7 +40,7 @@
         echo "<p>An error occurred while connecting to the $which_db database: $error_message </p>";
       }
     ?>
-    
+
     <img src="images/weenie_hut_juniors.webp" alt="best restaurant ever">
     <section id="welcome">
       <h1><?php echo "Howdy." ?></h1>
@@ -138,7 +138,8 @@
     </section>
     <section>
       <form class="join" action="index.html" method="post">
-
+        <input type="text" name="name" value="name">
+        <input type="submit" oncllick="alert('encouragement my friend! Yes!')">
       </form>
     </section>
   </body>
