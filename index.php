@@ -9,7 +9,7 @@
     <!-- connect to AWS RDS db -->
     <?php
       ### try connecting to AWS DB ###
-      /*
+
       $dbhost = $_SERVER['practice.crac6blasqqn.us-east-1.rds.amazonaws.com'];
       $dbport = $_SERVER['3306'];
       $dbname = $_SERVER['practice_db'];
@@ -23,10 +23,27 @@
         echo "<p>You are connected to the database.</p>";
       } catch (PDOException $e){
         $error_message = $e->getMessage();
-        echo "<p>An error occurred while connecting to the database: $error_message </p>";
+        echo "<p>An error occurred while connecting to the  RDS database: $error_message </p>";
+        echo "<p>Attempting connection to localhost.</p>"
+        $dbhost = 'localhost';
+        $dbport = '8080';
+        $dbname = 'practice_db';
+        $charset = 'utf8' ;
+
+        $dsn = "mysql:host={$dbhost};port={$dbport};dbname={$dbname};charset={$charset}";
+        $username = 'root';
+        $password = '&iaTRSb#';
+        try{
+          $pdo = new PDO($dsn, $username, $password);
+          echo "<p>You are connected to the database.</p>";
+        } catch (PDOException $e){
+          $error_message = $e->getMessage();
+          echo "<p>An error occurred while connecting to the local database: $error_message </p>";
+        }
       }
-      */
+
       ### try connecting to phpmyadmin db
+      /*
       $dbhost = 'localhost';
       $dbport = '8080';
       $dbname = 'practice_db';
@@ -40,8 +57,9 @@
         echo "<p>You are connected to the database.</p>";
       } catch (PDOException $e){
         $error_message = $e->getMessage();
-        echo "<p>An error occurred while connecting to the database: $error_message </p>";
+        echo "<p>An error occurred while connecting to the local database: $error_message </p>";
       }
+      */
     ?>
     <img src="images/weenie_hut_juniors.webp" alt="best restaurant ever">
     <section id="welcome">
