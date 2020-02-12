@@ -14,7 +14,7 @@
 
       $dbhost = $_SERVER['practice.crac6blasqqn.us-east-1.rds.amazonaws.com'];
       $dbport = $_SERVER['3306'];
-      $dbname = $_SERVER['practice'];
+      $dbname = $_SERVER['practice_db'];
       $charset = 'utf8' ;
 
       $dsn = "mysql:host={$dbhost};port={$dbport};dbname={$dbname};charset={$charset}";
