@@ -21,7 +21,7 @@
         echo "<p>You are connected to the database.</p>";
       } catch (PDOException $e){
         $error_message = $e->getMessage();
-        echo "<p>An error occurred while connecting to the database: $error_message </p>"
+        echo "<p>An error occurred while connecting to the database: $error_message </p>";
       }
     ?>
     <img src="images/weenie_hut_juniors.webp" alt="best restaurant ever">
