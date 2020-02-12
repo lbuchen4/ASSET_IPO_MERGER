@@ -10,14 +10,15 @@
     <?php
       ### try connecting to AWS DB ###
 
-      $dbhost = $_SERVER['aal42ywjdmqypb.crac6blasqqn.us-east-1.rds.amazonaws.com'];
-      $dbport = $_SERVER['3306'];
-      $dbname = $_SERVER['ebdb'];
+      $dbhost = $_SERVER['RDS_HOSTNAME'];
+      $dbport = $_SERVER['RDS_PORT'];
+      $dbname = $_SERVER['RDS_DB_NAME'];
       $charset = 'utf8' ;
 
       $dsn = "mysql:host={$dbhost};port={$dbport};dbname={$dbname};charset={$charset}";
-      $username = $_SERVER['admin'];
-      $password = $_SERVER['&iaTRSb#'];
+      $username = $_SERVER['RDS_USERNAME'];
+      $password = $_SERVER['RDS_PASSWORD'];
+
       try{
         $pdo = new PDO($dsn, $username, $password);
         echo "<p>You are connected to the database.</p>";
