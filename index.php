@@ -34,7 +34,7 @@
 
       try{
         $pdo = new PDO($dsn, $username, $password);
-        echo "<p>You are connected to the $which_db database.</p>";
+        echo "<p>You are connected to the $which_db database named $dbname.</p>";
       } catch (PDOException $e){
         $error_message = $e->getMessage();
         echo "<p>An error occurred while connecting to the $which_db database: $error_message </p>";
@@ -97,6 +97,8 @@
         <li><a href="https://classroom.udacity.com/courses/ud206" target="_blank">Access to your command line</a> - to feel like a legit hacker and use git.</li>
         <li><a href="https://github.com/" target="_blank">A Github account</a> - no relation to "the Hub" hub.</li>
       </ul>
+      <p>If you need a quick jog of the muscle memory check out the <a href="https://www.w3schools.com/" target="_blank">w3schools</a>.</p>
+      <p>I also recommend a music machine like Sputify to help transfer the Karma!</p>
       <p>There are a few other components to this setup that will make you want to quit before you start:</p>
       <ul>
         <li>AWS Elastic Beanstalk</li>
