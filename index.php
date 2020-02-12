@@ -10,9 +10,9 @@
     <?php
       ### try connecting to AWS DB ###
 
-      $dbhost = $_SERVER['practice.crac6blasqqn.us-east-1.rds.amazonaws.com'];
+      $dbhost = $_SERVER['aal42ywjdmqypb.crac6blasqqn.us-east-1.rds.amazonaws.com'];
       $dbport = $_SERVER['3306'];
-      $dbname = $_SERVER['practice_db'];
+      $dbname = $_SERVER['ebdb'];
       $charset = 'utf8' ;
 
       $dsn = "mysql:host={$dbhost};port={$dbport};dbname={$dbname};charset={$charset}";
@@ -41,25 +41,6 @@
           echo "<p>An error occurred while connecting to the local database: $error_message </p>";
         }
       }
-
-      ### try connecting to phpmyadmin db
-      /*
-      $dbhost = 'localhost';
-      $dbport = '8080';
-      $dbname = 'practice_db';
-      $charset = 'utf8' ;
-
-      $dsn = "mysql:host={$dbhost};port={$dbport};dbname={$dbname};charset={$charset}";
-      $username = 'root';
-      $password = '&iaTRSb#';
-      try{
-        $pdo = new PDO($dsn, $username, $password);
-        echo "<p>You are connected to the database.</p>";
-      } catch (PDOException $e){
-        $error_message = $e->getMessage();
-        echo "<p>An error occurred while connecting to the local database: $error_message </p>";
-      }
-      */
     ?>
     <img src="images/weenie_hut_juniors.webp" alt="best restaurant ever">
     <section id="welcome">
@@ -155,6 +136,11 @@
         Given that you cancel this trial in time, our costs should come to no more than about 5 dollars per month. <br>
         Now I understand that for some of us, this price may be a bit steep. But if we can get our fellow spirits to commit, we can all afford to <strong>boom</strong>.
       </p>
-    </section
+    </section>
+    <section>
+      <form class="join" action="index.html" method="post">
+
+      </form>
+    </section>
   </body>
 </html>
