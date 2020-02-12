@@ -151,7 +151,7 @@
 
       <!-- add PHP to add member to appropriate table -->
       <?php
-        if(isset$_POST['name']){
+        if(isset($_POST['name']){
           $name = $_POST['name'];
           $sql = "INSERT INTO participants
                   VALUES ($name);"
