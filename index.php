@@ -144,6 +144,8 @@
       </p>
     </section>
     <section>
+      <h2>Join Me! Yes!</h2>
+      <p>Do not hesitate friends! Put your name in this box and let us embark. Your muscles remember. Yes!</p>
       <form class="join" action="index.php" method="post">
         <input type="text" name="name" value="name">
         <input type="submit" name="join" value="Boom" onclick="alert('Encouragement! Yes!')">
@@ -152,19 +154,32 @@
       <!-- add PHP to add member to appropriate table -->
       <?php
         if(isset($_POST['name'])){
-          $name = $_POST['name'];
+          $name = "'" . $_POST['name'] . "'";
+          //echo $name;
           $sql = "INSERT INTO participants
                   VALUES ($name);";
+          //echo $sql;
           $statement = $pdo->prepare($sql);
           $statement->execute();
-          $members = $statement->fetchAll();
           $statement->closeCursor();
-          foreach ($members as $member){
-            echo $member['name'];
-          }
         }
-      ?>
+        $sql = 'SELECT * FROM participants';
+        $statement = $pdo->prepare($sql);
+        $statement->execute();
+        $members = $statement->fetchAll();
+        $statement->closeCursor();
+        ?>
 
+        <h3>Confirmed Peacocks</h3>
+        <ol>
+
+
+        <?php
+        foreach ($members as $member):
+          echo "<li>" . $member['name'] . "</li>";
+        endforeach;
+        ?>
+        </ol>
     </section>
   </body>
 </html>
