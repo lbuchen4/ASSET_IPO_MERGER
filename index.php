@@ -50,7 +50,7 @@
 
   <body>
     <section id="welcome">
-      <h1><BRAVE PEACOCKS</h1>
+      <h1>BRAVE PEACOCKS</h1>
       <h2>I return.</h2>
       <p>
         Regard me. There was a powerful disturbane in the cosmic karma. <br>
@@ -58,18 +58,17 @@
         But no more is it the time for hiding! <strong>Boom.</strong> Regard me please. <strong>Boom.</strong> <br>
         Now is the time for coding. <br>
        </p>
-         <img src="images/salvadore.jpg" alt="master of sexy yoga and LAMP Stack expert">
+        <!-- <img src="images/salvadore.jpg" alt="master of sexy yoga and LAMP Stack expert"> -->
        <p>
-         Just because I tech sexy yoga you don't think I am capable of the coding? <br>
-         <em>Fuck you.</em> Regard me please. Coding is basically sexy yoga for your computer machine. <br>
-         And I am going to provide this safe space for all of us to practice, learn, grow and <strong>Boom</strong> together. <br>
+         Now that you have all flexed your sexy muscles by completing all the git, HTML, and CSS courses that I suggested...  <br>
+         <em>We are ready to train!</em> Regard me please. I will allocate coding challenges to each one of you completely at random. <br>
+         Those who endure their challenge with the grace of a fearless peacock will be on the way to developing the muscle memory. <br>
       </p>
     </section>
-    <section class="languages">
+    <section class="review">
       <h2>Languages</h2>
       <p>
-        The world of code can be overwhelming. Just like sexy yoga, the key is to breathe, and focus. <br>
-        We will be focusing primarily on:
+        In case you wish to review before you attempt your challenge I have included the links to these very powerful resources once more. <br>
       </p>
       <ul>
         <li class="client"><a href="https://www.codecademy.com/catalog/language/html-css" target="_blank">HTML</a></li>
@@ -89,23 +88,14 @@
     </section>
     <section class="tools">
       <h2>Tools</h2>
-      <p>Before we get dive in, we will need some tools to assist us on our journey.</p>
+      <p>And again... here are the tools that each and every one of you has now downloaded to your computer machine.</p>
       <ul>
-        <li>A computer machine.</li>
         <li><a href="https://atom.io/" target="_blank">A Text Editor</a> - to type our code in.</li>
         <li><a href="https://www.apachefriends.org/index.html" target="_blank">Xampp</a> - to communicate with the Chinese children.</li>
         <li><a href="https://classroom.udacity.com/courses/ud206" target="_blank">Access to your command line</a> - to feel like a legit hacker and use git.</li>
         <li><a href="https://github.com/" target="_blank">A Github account</a> - no relation to "the Hub" hub.</li>
       </ul>
-      <p>If you need a quick jog of the muscle memory check out the <a href="https://www.w3schools.com/" target="_blank">w3schools</a>.</p>
-      <p>I also recommend a music machine like Sputify to help transfer the Karma!</p>
-      <p>There are a few other components to this setup that will make you want to quit before you start:</p>
-      <ul>
-        <li>AWS Elastic Beanstalk</li>
-        <li>Ngrok</li>
-      </ul>
-      <p>Best option might be to bring me your computer machine and I walk through it with you:</p>
-      <img src="images/boom.jpg" alt="boom">
+      <p>Here is another great resource for review <a href="https://www.w3schools.com/" target="_blank">w3schools</a>.</p>
     </section>
     <section class="scope">
       <p>
