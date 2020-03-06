@@ -5,58 +5,58 @@
     <link rel="stylesheet" type="text/css" href="css/practice.css">
     <title>Weenie Hut Haqs</title>
   </head>
+
+  <!-- connect to AWS RDS db -->
+  <?php
+    ### try connecting to AWS DB ###
+
+    if(isset($_SERVER['RDS_HOSTNAME'])){
+      $which_db = "AWS";
+      $dbhost = $_SERVER['RDS_HOSTNAME'];
+      $dbport = $_SERVER['RDS_PORT'];
+      $dbname = $_SERVER['RDS_DB_NAME'];
+      $charset = 'utf8' ;
+
+      $dsn = "mysql:host={$dbhost};port={$dbport};dbname={$dbname};charset={$charset}";
+      $username = $_SERVER['RDS_USERNAME'];
+      $password = $_SERVER['RDS_PASSWORD'];
+    } else {
+      $which_db = "local";
+      $dbhost = 'localhost';
+      $dbport = '8080';
+      $dbname = 'practice_db';
+      $charset = 'utf8' ;
+
+      $dsn = "mysql:host={$dbhost};port={$dbport};dbname={$dbname};charset={$charset}";
+      $username = 'root';
+      $password = '&iaTRSb#';
+    }
+
+    try{
+      $pdo = new PDO($dsn, $username, $password);
+      echo "<p>You are connected to the $which_db database named $dbname.</p>";
+    } catch (PDOException $e){
+      $error_message = $e->getMessage();
+      echo "<p>An error occurred while connecting to the $which_db database: $error_message </p>";
+    }
+    //first create the table if it doesn't already exist
+    $sql = "CREATE TABLE participants (
+      name VARCHAR(20)
+    )";
+    $statement = $pdo->prepare($sql);
+    $statement->execute();
+    $statement->closeCursor();
+  ?>
+
   <body>
-    <!-- connect to AWS RDS db -->
-    <?php
-      ### try connecting to AWS DB ###
-
-      if(isset($_SERVER['RDS_HOSTNAME'])){
-        $which_db= "AWS";
-        $dbhost = $_SERVER['RDS_HOSTNAME'];
-        $dbport = $_SERVER['RDS_PORT'];
-        $dbname = $_SERVER['RDS_DB_NAME'];
-        $charset = 'utf8' ;
-
-        $dsn = "mysql:host={$dbhost};port={$dbport};dbname={$dbname};charset={$charset}";
-        $username = $_SERVER['RDS_USERNAME'];
-        $password = $_SERVER['RDS_PASSWORD'];
-      } else {
-        $which_db = "local";
-        $dbhost = 'localhost';
-        $dbport = '8080';
-        $dbname = 'practice_db';
-        $charset = 'utf8' ;
-
-        $dsn = "mysql:host={$dbhost};port={$dbport};dbname={$dbname};charset={$charset}";
-        $username = 'root';
-        $password = '&iaTRSb#';
-      }
-
-      try{
-        $pdo = new PDO($dsn, $username, $password);
-        echo "<p>You are connected to the $which_db database named $dbname.</p>";
-      } catch (PDOException $e){
-        $error_message = $e->getMessage();
-        echo "<p>An error occurred while connecting to the $which_db database: $error_message </p>";
-      }
-      //first create the table if it doesn't already exist
-      $sql = "CREATE TABLE participants (
-        name VARCHAR(20)
-      )";
-      $statement = $pdo->prepare($sql);
-      $statement->execute();
-      $statement->closeCursor();
-    ?>
-
-    <img src="images/weenie_hut_juniors.webp" alt="best restaurant ever">
     <section id="welcome">
-      <h1><?php echo "Howdy." ?></h1>
-      <h2>Welcome to Weenie Hut Junior's. Have a hot dog.</h2>
+      <h1><BRAVE PEACOCKS</h1>
+      <h2>I return.</h2>
       <p>
-        If you are on this amazing webpage, then you have expressed interest in coding at some point in time. <br>
-        In case this website has not already convinced you of my prowess, I will simply confirm, I am a coding Jedi. <br>
-        Still not convinced? Watch this. <strong>Boom.</strong> Regard me please. <strong>Boom.</strong> <br>
-        That's right. It is I, Salvadore. <br>
+        Regard me. There was a powerful disturbane in the cosmic karma. <br>
+        For two weeks Salvadore survived on only sexy yoga and flaming hot cheetos. <br>
+        But no more is it the time for hiding! <strong>Boom.</strong> Regard me please. <strong>Boom.</strong> <br>
+        Now is the time for coding. <br>
        </p>
          <img src="images/salvadore.jpg" alt="master of sexy yoga and LAMP Stack expert">
        <p>
