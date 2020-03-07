@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/practice.css">
-    <title>Weenie Hut Haqs</title>
+    <title>Sexy Yoga is Fake</title>
   </head>
 
   <!-- connect to AWS RDS db -->
@@ -40,15 +40,38 @@
       echo "<p>An error occurred while connecting to the $which_db database: $error_message </p>";
     }
     //first create the table if it doesn't already exist
-    $sql = "CREATE TABLE participants (
-      name VARCHAR(20)
+    $sql = "CREATE TABLE homework (
+      id VARCHAR (10), name VARCHAR(20), task VARCHAR(100), skill VARCHAR(30), PRIMARY KEY (id)
     )";
     $statement = $pdo->prepare($sql);
     $statement->execute();
     $statement->closeCursor();
+
   ?>
 
   <body>
+    <?php
+    //populate the table with a few tasks
+    $tasks = array("Change the text color of this page", "Add a paragraph presenting the proof that sexy yoga prevents coronavirus", "Fix the title of this page", "Add a video to this page", "Change the font of the text on this page", "Add a background-color to the body of this page");
+    $skills = array("CSS", "HTML", "HTML", "HTML", "CSS", "CSS");
+    foreach($tasks as $id => $task){
+      $sql = "INSERT INTO homework (id, task)
+              VALUES ('$id', '$task');";
+      echo $sql;
+      $statement = $pdo->prepare($sql);
+      $statement->execute();
+      $statement->closeCursor();
+    }
+    foreach($skills as $id => $skill){
+      $sql= "UPDATE homework
+              SET skill = ('$skill')
+              WHERE id = $id;";
+      echo $sql;
+      $statement = $pdo->prepare($sql);
+      $statement->execute();
+      $statement->closeCursor();
+    }
+    ?>
     <section id="welcome">
       <h1>BRAVE PEACOCKS</h1>
       <h2>I return.</h2>
@@ -66,7 +89,7 @@
       </p>
     </section>
     <section class="review">
-      <h2>Languages</h2>
+      <h2>Review</h2>
       <p>
         In case you wish to review before you attempt your challenge I have included the links to these very powerful resources once more. <br>
       </p>
@@ -78,13 +101,6 @@
         <li class="server"><a href="https://www.codecademy.com/catalog/language/php" target="_blank">PHP</a></li>
         <li class="server"><a href="https://www.codecademy.com/catalog/language/sql" target="_blank">SQL</a></li>
       </ul>
-      <p>
-        The <span class="client">maroon</span> ones are known as <em>client-side</em> languages. <br>
-        They are interpretted by the web browser like chrome or firefux. <br>
-        The <span class="server">blue</span> ones are called <em>server-side</em> languages. <br>
-        Their functionality depends on little Chinese children in my basement. <br>
-        Git is a Version Control System built into your computer if you have a mac. <br>
-      </p>
     </section>
     <section class="tools">
       <h2>Tools</h2>
@@ -97,81 +113,30 @@
       </ul>
       <p>Here is another great resource for review <a href="https://www.w3schools.com/" target="_blank">w3schools</a>.</p>
     </section>
-    <section class="scope">
-      <p>
-        Now, probably you are thinking: why tf would I want to waste sexy yoga time to type on my computer machine?
-        This I also asked at first. But, regard me please. The coding is very <strong>powerful</strong>. <br>
-        We can be making:
-      </p>
-      <ul>
-        <li>Dynamic Websites</li>
-        <li>Webapps</li>
-        <li>Databases Driven Thingys</li>
-      </ul>
-      <p>When we conquer this terrain we may tackle:</p>
-      <ul>
-        <li>Swift Apps for iOS</li>
-        <li>JAVA Apps for Android losers</li>
-        <li>Artificially intelligent Python Programs</li>
-      </ul>
-    </section>
-    <section class="start">
-      So. Where to start? Regard me please. It is very imprtant that you learn the Git, CSS and HTML first. <br>
-      You can be learning the HTML in 15 minutes. CSS will take 17. Git is a little trickier. <br>
-      In theory you should be doing the Git first. But if you want to flex your sexy muscles, do the HTML and CSS first. <br>
-      Try clicking on some of the links up above to see where I reccomend you start being the learning. <br>
-      When you get the hang of those three, come back and try to make this page better (impossible). <br><br>
-      If you like this page and you are interested in participating, please click <a href="images/oops.jpg">here</a>.
-    </section>
-    <section class="cost">
-      <h2>Cost</h2>
-      <p>
-        So my friends. Now you are probably thinking that this is too good to be true.<br>
-        Not so! Only, these <strong>powerful</strong> resources are not completely free. <br>
-        The capitalist pigs at Amazon intend to charge us for our databases and instances. <br>
-        The nerds at codecademy also try to trick you into paying for a pro membership by means of their free trial. <br>
-        My friends, regard me. It is of the utmost importance that you do not forget to cancel this trial. <br>
-        Given that you cancel this trial in time, our costs should come to no more than about 5 dollars per month. <br>
-        Now I understand that for some of us, this price may be a bit steep. But if we can get our fellow spirits to commit, we can all afford to <strong>boom</strong>.
-      </p>
-    </section>
-    <section>
-      <h2>Join Me! Yes!</h2>
-      <p>Do not hesitate friends! Put your name in this box and let us embark. Your muscles remember. Yes!</p>
-      <form class="join" action="index.php" method="post">
-        <input type="text" name="name" value="name">
-        <input type="submit" name="join" value="Boom" onclick="alert('Encouragement! Yes!')">
-      </form>
 
-      <!-- add PHP to add member to appropriate table -->
+    <section class="tasks">
+      <h2>Tasks</h2>
+      <p>
+        Encouragement! Yes my friends. Now that you are nice and limbered up, it is time to select your challenge! <br>
+        Regard me. Please type your name below the challenge you wish to tackle then click submit. <br>
+        Only one each for now my brave peacocks! <br>
+      </p>
+      <h3>Challenges</h3>
       <?php
-        if(isset($_POST['name'])){
-          $name = "'" . $_POST['name'] . "'";
-          //echo $name;
-          $sql = "INSERT INTO participants
-                  VALUES ($name);";
-          //echo $sql;
-          $statement = $pdo->prepare($sql);
-          $statement->execute();
-          $statement->closeCursor();
-        }
-        $sql = 'SELECT * FROM participants';
-        $statement = $pdo->prepare($sql);
-        $statement->execute();
-        $members = $statement->fetchAll();
-        $statement->closeCursor();
-        ?>
+      //goal here is to build a table that displays the challenge and the skill type, but allows users to insert name to claim task
+      $i = 1; //want to number the challenges
+      $sql = "SELECT * FROM homework";
+      $statement = $pdo->prepare($sql);
+      $statement->execute();
+      $assignments = $statement->fetchAll();
+      $statement->closeCursor();
 
-        <h3>Confirmed Peacocks</h3>
-        <ol>
+      foreach($assignments as $assignment){
+        echo $i . ". " . $assignment['task'] . ". <br> Skill: " . $assignment['skill'] . "<br><br>";
+        $i++;
+      };
 
-
-        <?php
-        foreach ($members as $member):
-          echo "<li>" . $member['name'] . "</li>";
-        endforeach;
-        ?>
-        </ol>
+       ?>
     </section>
   </body>
 </html>
