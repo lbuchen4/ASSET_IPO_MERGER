@@ -34,10 +34,10 @@
 
     try{
       $pdo = new PDO($dsn, $username, $password);
-      echo "<p>You are connected to the $which_db database named $dbname.</p>";
+      //echo "<p>You are connected to the $which_db database named $dbname.</p>";
     } catch (PDOException $e){
       $error_message = $e->getMessage();
-      echo "<p>An error occurred while connecting to the $which_db database: $error_message </p>";
+      //echo "<p>An error occurred while connecting to the $which_db database: $error_message </p>";
     }
     //first create the table if it doesn't already exist
     $sql = "CREATE TABLE homework (
@@ -57,7 +57,7 @@
     foreach($tasks as $id => $task){
       $sql = "INSERT INTO homework (id, task)
               VALUES ('$id', '$task');";
-      echo $sql;
+      //echo $sql;
       $statement = $pdo->prepare($sql);
       $statement->execute();
       $statement->closeCursor();
@@ -66,7 +66,21 @@
       $sql= "UPDATE homework
               SET skill = ('$skill')
               WHERE id = $id;";
-      echo $sql;
+      //echo $sql;
+      $statement = $pdo->prepare($sql);
+      $statement->execute();
+      $statement->closeCursor();
+    }
+
+    //check if someone has accepted challenge and add them to the table
+    if(isset($_POST['challenger'])){
+      $name = $_POST['challenger'];
+      $id = $_POST['challenge_id'];
+
+      $sql = "UPDATE homework
+      SET name = ('$name')
+      WHERE id = $id;";
+
       $statement = $pdo->prepare($sql);
       $statement->execute();
       $statement->closeCursor();
@@ -84,7 +98,7 @@
         <!-- <img src="images/salvadore.jpg" alt="master of sexy yoga and LAMP Stack expert"> -->
        <p>
          Now that you have all flexed your sexy muscles by completing all the git, HTML, and CSS courses that I suggested...  <br>
-         <em>We are ready to train!</em> Regard me please. I will allocate coding challenges to each one of you completely at random. <br>
+         <em>We are ready to train!</em> Regard me please. I have provided 6 challenges for you to choose from. <br>
          Those who endure their challenge with the grace of a fearless peacock will be on the way to developing the muscle memory. <br>
       </p>
     </section>
@@ -118,7 +132,7 @@
       <h2>Tasks</h2>
       <p>
         Encouragement! Yes my friends. Now that you are nice and limbered up, it is time to select your challenge! <br>
-        Regard me. Please type your name below the challenge you wish to tackle then click submit. <br>
+        Regard me. Please type your name below the challenge you wish to tackle then click <strong>Accept</strong>. <br>
         Only one each for now my brave peacocks! <br>
       </p>
       <h3>Challenges</h3>
@@ -132,7 +146,22 @@
       $statement->closeCursor();
 
       foreach($assignments as $assignment){
-        echo $i . ". " . $assignment['task'] . ". <br> Skill: " . $assignment['skill'] . "<br><br>";
+        echo "<strong>" . $i . ".</strong> " . $assignment['task'] . ". <br> Skill: " . $assignment['skill'] . "<br>";
+        //add an option to accept this challenge if it is not taken. If it is taken, echo the challenger's name.
+        if(isset($assignment['name'])){
+          echo "Brave peacock <strong>" . $assignment['name'] . "</strong> has accepted this challenge.<br><br>";
+        }
+        else{
+          //add html form to input name
+          ?>
+            <form class="accept_task" action="index.php" method="post">
+              <input type="text" name="challenger" value="name">
+              <input type="hidden" name="challenge_id" value="<?php echo $assignment['id']; ?>">
+              <input type="submit" name="submit_challenge" value="Accept" onclick="alert('Encouragement! Yes!')">
+            </form>
+            <br><br>
+          <?php
+        }
         $i++;
       };
 
