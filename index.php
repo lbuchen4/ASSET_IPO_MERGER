@@ -90,7 +90,7 @@
       <h1>BRAVE PEACOCKS</h1>
       <h2>I return.</h2>
       <p>
-        Regard me. There was a powerful disturbane in the cosmic karma. <br>
+        Regard me. There was a powerful disturbance in the cosmic karma. <br>
         For two weeks Salvadore survived on only sexy yoga and flaming hot cheetos. <br>
         But no more is it the time for hiding! <strong>Boom.</strong> Regard me please. <strong>Boom.</strong> <br>
         Now is the time for coding. <br>
@@ -174,7 +174,7 @@
       This, I have done for the true challenge is to prepare your computer machine to be <em>powerful</em> beast. <br>
       Do not be discouraged my friends! <br>
       For I will guide your body and your computer machine through these difficult positions like a sherpa. <br>
-      And if you're muscle memory needs a little more guiding, swing by my yurt with your computer machine and I will <strong>Boom</strong> this one for you. <br><br>
+      And if your muscle memory needs a little more guiding, swing by my yurt with your computer machine and I will <strong>Boom</strong> this one for you. <br><br>
       Truly, there are <strong>3</strong> components to this process. <br>
       </p>
       <ol>
