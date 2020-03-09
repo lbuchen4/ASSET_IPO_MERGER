@@ -1,6 +1,12 @@
-.client {
-  color: maroon;
+/* This is a CSS comment. Welcome to the stylesheet for our page. This is where we make the things pretty. */
+body{
+  text-align: center;
 }
-.server {
-  color: blue;
+input{
+  width: 80%;
+  font-size: 15px;
+}
+input[type="submit"]{
+  background-color: #0362fc;
+  color: white;
 }
