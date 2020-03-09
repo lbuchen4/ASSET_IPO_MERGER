@@ -345,7 +345,7 @@
       <strong>Paste</strong> the <strong>Sexy-Yoga</strong> folder into the <strong>htdocs</strong> folder. <br>
       You will need to re-paste this Sexy-Yog filder into the htdocs folder each time you wish to see your changes.<br>
       Head to the <strong>General</strong> tab of Xampp and click <strong>Go to Application</strong>.<br>
-      <strong>Replace</strong> the word <strong>dashboard</strong> with the folder name, <strong>Sexy-Yoga</strong>. <br>
+      In the URL of your browser, <strong>replace</strong> the word <strong>dashboard</strong> with the folder name, <strong>Sexy-Yoga</strong>. <br>
       <strong>Refresh the page</strong>. <br>
       Your changes should be visible! <br><br>
       Again this is only so on your very own computer machine. To share these changes with the flock, you must <strong>Push</strong> them to Github. <br><br>
