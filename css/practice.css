@@ -1,10 +1,10 @@
 /* This is a CSS comment. Welcome to the stylesheet for our page. This is where we make the things pretty. */
-body{
+body, ol, li{
   text-align: center;
 }
 input{
   width: 80%;
-  font-size: large;
+  font-size: 30px;
 }
 input[type="submit"]{
   background-color: #0362fc;
