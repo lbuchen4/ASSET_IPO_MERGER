@@ -4,7 +4,7 @@ body{
 }
 input{
   width: 80%;
-  font-size: 15px;
+  font-size: large;
 }
 input[type="submit"]{
   background-color: #0362fc;
