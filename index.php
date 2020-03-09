@@ -167,5 +167,21 @@
 
        ?>
     </section>
+    <section>
+      <h1>COMPUTER MACHINE SETUP</h1>
+      <p>
+      Ok. Salvadore must make a quick confession. These assignments are really easy. <br>
+      This, I have done for the true challenge is to prepare your computer machine to be <em>powerful</em> beast. <br>
+      Do not be discouraged my friends! <br>
+      For I will guide your body and your computer machine through these difficult positions like a sherpa. <br>
+      And if you're muscle memory needs a little more guiding, swing by my yurt with your computer machine and I will <strong>Boom</strong> this one for you. <br><br>
+      Truly, there are <strong>3</strong> components to this process. <br>
+      </p>
+      <ol>
+        <li>Download and install <a href="https://atom.io/" target="_blank">Atom</a> or the text editor of your choice</li>
+        <li>Download, install and configure <a href="https://www.apachefriends.org/index.html" target="_blank">Xampp</a></li>
+        <li>Setup git and github (again no relation to The Hub) to track your changes and share them with the peacock flock</li>
+      </ol>
+    </section>
   </body>
 </html>
