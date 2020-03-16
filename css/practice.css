@@ -1,6 +1,6 @@
 /* This is a CSS comment. Welcome to the stylesheet for our page. This is where we make the things pretty. */
 body, ol, li{
-  text-align: center;
+  text-align: left;
 }
 ol, ul{
   text-align: center;
